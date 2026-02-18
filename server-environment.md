@@ -59,20 +59,20 @@ _What does “beta compatible” or "beta support" mean?_
 
 - PHP 8.3
   - When using a 'Beta Compatible' PHP version, Deprecation notices may be seen in error logs, wp-admin or on-page. A deprecation notice is not an error, but is an indicator that the code being cited in the notice will be changed in future PHP versions. With a deprecation notice, the PHP code will continue to work, and nothing is broken.
-  - [#59231: Prepare for PHP 8.3.](https://core.trac.wordpress.org/ticket/59231). _NOTE: Closed/Fixed_
-  - [#59232: Introduce #[Override] attribute to mark overloaded methods](https://core.trac.wordpress.org/ticket/59232) This attribute helps prevent coding errors by making it clear when a method is overloaded. It also assists with refactoring, debugging, and catching potential breaking changes in the parent class. _NOTE: Has a patch, but moved to Future Release._
-  - [#59233: Improve error handling for unserialize()](https://core.trac.wordpress.org/ticket/59233). maybe_unserialize() function could still be confronted by data with trailing bytes. _NOTE: Moved to Future Release._
+  - [#59231](https://core.trac.wordpress.org/ticket/59231): Prepare for PHP 8.3. _NOTE: Closed/Fixed_
+  - [#59232](https://core.trac.wordpress.org/ticket/59232): Introduce #[Override] attribute to mark overloaded methods. This attribute helps prevent coding errors by making it clear when a method is overloaded. It also assists with refactoring, debugging, and catching potential breaking changes in the parent class. _NOTE: Has a patch, but moved to Future Release._
+  - [#59233](https://core.trac.wordpress.org/ticket/59233): Improve error handling for unserialize(). maybe_unserialize() function could still be confronted by data with trailing bytes. _NOTE: Moved to Future Release._
 
 - PHP 8.4
   - Deprecation notices.  A deprecation notice is not an error, but is an indicator that the code being cited in the notice will be changed in future PHP versions. With a deprecation notice, the PHP code will continue to work, and nothing is broken.
-  - [#62061: Prepare for PHP 8.4.](https://core.trac.wordpress.org/ticket/62061). _NOTE: Closed/Fixed_
+  - [#62061](https://core.trac.wordpress.org/ticket/62061): Prepare for PHP 8.4. _NOTE: Closed/Fixed_
 
 - Other PHP Related Tickets 
-  - [#51525: Add new functions apply_filters_single_type() and apply_filters_ref_array_single_type().](https://core.trac.wordpress.org/ticket/51525). _Note: Moved to Future Release._
-  - [#54183: Tests: decide on how to handle deprecations in PHPUnit](https://core.trac.wordpress.org/ticket/54183). _Note: Moved to Future Release._
-  - [#54537: Tests: Enable PHP version check once PHP 8.0 compatibility is achieved.](https://core.trac.wordpress.org/ticket/54537). _Note: Moved to Future Release._
-  - [#58874: Code Modernization: Consider using the null coalescing operator.](https://core.trac.wordpress.org/ticket/58874). _Note: Moved to Future Release._
-  - [#59234: Introduce a wp_json_decode() function, including validation when available](https://core.trac.wordpress.org/ticket/59234). _Note: This ticket has been closed and won’t be moving forward._
+  - [#51525](https://core.trac.wordpress.org/ticket/51525): Add new functions apply_filters_single_type() and apply_filters_ref_array_single_type(). _Note: Moved to Future Release._
+  - [#54183](https://core.trac.wordpress.org/ticket/54183): Tests: decide on how to handle deprecations in PHPUnit. _Note: Moved to Future Release._
+  - [#54537](https://core.trac.wordpress.org/ticket/54537): Tests: Enable PHP version check once PHP 8.0 compatibility is achieved. _Note: Moved to Future Release._
+  - [#58874](https://core.trac.wordpress.org/ticket/58874): Code Modernization: Consider using the null coalescing operator. _Note: Moved to Future Release._
+  - [#59234](https://core.trac.wordpress.org/ticket/59234): Introduce a wp_json_decode() function, including validation when available. _Note: This ticket has been closed and won’t be moving forward._
 
 
 #### WordPress 6.7
@@ -86,50 +86,50 @@ _IMPORTANT: WordPress 6.7 is **compatible with exceptions** with PHP 8.0, PHP 8.
 _What does 'compatible with exceptions' mean?_
 
 - PHP 8.0
-  - [**#48689**: Filesystem WP_Filesystem_FTPext and WP_Filesystem_SSH2 when connect fails.](https://core.trac.wordpress.org/ticket/48689) An investigation is underway as to why on some occasions the access to the files returns some type of error. _NOTE: Has a patch._
-  - [**#49728**: Prepare for the internal functions throwing TypeError or ValueError exceptions on unexpected types/values.](https://core.trac.wordpress.org/ticket/49728) Internal functions will throw an exception if the function call arguments are of a type that is not expected. _NOTE: Has a patch._
-  - [**#51019**: convert_smilies() fails on large tags.](https://core.trac.wordpress.org/ticket/51019) The function fails when dealing with large HTML tags, particularly when an image with a large data URL is included in the post content. _NOTE: Has a patch, but moved to WordPress 6.8._
-  - [**#55121**: classic widgets with no settings won't show up in 5.9.](https://core.trac.wordpress.org/ticket/55121) Classic widgets with no settings do not appear correctly in WordPress 5.9 and above. This is due to changes in how widgets are handled in the block editor, causing compatibility problems with older widget setups. _NOTE: Has a patch, but moved to WordPress 6.3._
-  - [**#55257**: map_deep() function incompatibility with incomplete objects in PHP 8.0+.](https://core.trac.wordpress.org/ticket/55257) The function becomes incompatible with incomplete objects when running on PHP 8.0 or higher. _NOTE: Has a patch, but moved to Future Release._
-  - [**#59649**: Named parameters. WordPress does not support named parameters.](https://core.trac.wordpress.org/ticket/59649) PHP 8.0 supports optionally calling functions and class methods by specifying the parameter name, instead of calling them on the order of parameters that they are declared. PHP, and many other programming languages, support positional parameters: The caller passes the parameters in the same order the function/method declares its parameters. _NOTE: Moved to WordPress 6.8._
-  - [**#60745**: WP_Query::parse_query() does not handle invalid query arg values.](https://core.trac.wordpress.org/ticket/60745) The function does not properly handle invalid query argument values. This results in PHP fatal errors when unintended data types, like arrays, are passed where scalars are expected. _NOTE: Has a patch, but moved to WordPress 6.8._
+  - [#48689](https://core.trac.wordpress.org/ticket/48689): Filesystem WP_Filesystem_FTPext and WP_Filesystem_SSH2 when connect fails. An investigation is underway as to why on some occasions the access to the files returns some type of error. _NOTE: Has a patch._
+  - [#49728](https://core.trac.wordpress.org/ticket/49728): Prepare for the internal functions throwing TypeError or ValueError exceptions on unexpected types/values. Internal functions will throw an exception if the function call arguments are of a type that is not expected. _NOTE: Has a patch._
+  - [#51019](https://core.trac.wordpress.org/ticket/51019): convert_smilies() fails on large tags. The function fails when dealing with large HTML tags, particularly when an image with a large data URL is included in the post content. _NOTE: Has a patch, but moved to WordPress 6.8._
+  - [#55121](https://core.trac.wordpress.org/ticket/55121): classic widgets with no settings won't show up in 5.9. Classic widgets with no settings do not appear correctly in WordPress 5.9 and above. This is due to changes in how widgets are handled in the block editor, causing compatibility problems with older widget setups. _NOTE: Has a patch, but moved to WordPress 6.3._
+  - [#55257](https://core.trac.wordpress.org/ticket/55257): map_deep() function incompatibility with incomplete objects in PHP 8.0+. The function becomes incompatible with incomplete objects when running on PHP 8.0 or higher. _NOTE: Has a patch, but moved to Future Release._
+  - [#59649](https://core.trac.wordpress.org/ticket/59649): Named parameters. WordPress does not support named parameters. PHP 8.0 supports optionally calling functions and class methods by specifying the parameter name, instead of calling them on the order of parameters that they are declared. PHP, and many other programming languages, support positional parameters: The caller passes the parameters in the same order the function/method declares its parameters. _NOTE: Moved to WordPress 6.8._
+  - [#60745](https://core.trac.wordpress.org/ticket/60745): WP_Query::parse_query() does not handle invalid query arg values. The function does not properly handle invalid query argument values. This results in PHP fatal errors when unintended data types, like arrays, are passed where scalars are expected. _NOTE: Has a patch, but moved to WordPress 6.8._
 
 - PHP 8.1
   - Not all "passing null to non-nullable" issues have been found. In PHP, you can tell a function exactly what type of information it should accept. If you tell a function to expect a certain type of information, and you give it nothing at all (null is like saying "nothing"), then PHP gets confused and gives an error. This problem happens when someone accidentally gives a function "nothing" when the function wasn't designed to handle "nothing".
-  - [**#53465**: htmlentities() needs the default value of the flags parameter explicitly set.](https://core.trac.wordpress.org/ticket/53465) According to [htmlentities()](https://www.php.net/manual/en/function.htmlentities.php), the default for flags for PHP 8.1 was "changed from `ENT_COMPAT` to `ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401`". All use cases for this functionality in Core are being investigated. _NOTE: Has a patch._
-  - [**#57579**: Replace most strip_tags() with wp_strip_tags().](https://core.trac.wordpress.org/ticket/57579) Proposes optimizing how block templates are handled by minimizing unnecessary filesystem calls during their loading process. _NOTE: Has a patch, but moved to Future Release._
-  - [**#57580**: Avoid errors from null parameters in add_submenu_page().](https://core.trac.wordpress.org/ticket/57580) A deprecated error caused by the `wp_normalize_path()` function when null is passed as an argument. This issue occurs primarily due to plugins incorrectly passing null in the `add_submenu_page()` function. _NOTE: Has a patch, but moved to Future Release._
-  - [**#61179**: Deprecated messages about passing null in widgets.php](https://core.trac.wordpress.org/ticket/61179) Addresses a deprecated message issue in `widgets.php`. _NOTE: Has a patch, but moved to WordPress 6.7._
+  - [#53465](https://core.trac.wordpress.org/ticket/53465): htmlentities() needs the default value of the flags parameter explicitly set. According to [htmlentities()](https://www.php.net/manual/en/function.htmlentities.php), the default for flags for PHP 8.1 was "changed from `ENT_COMPAT` to `ENT_QUOTES | ENT_SUBSTITUTE | ENT_HTML401`". All use cases for this functionality in Core are being investigated. _NOTE: Has a patch._
+  - [#57579](https://core.trac.wordpress.org/ticket/57579): Replace most strip_tags() with wp_strip_tags(). Proposes optimizing how block templates are handled by minimizing unnecessary filesystem calls during their loading process. _NOTE: Has a patch, but moved to Future Release._
+  - [#57580](https://core.trac.wordpress.org/ticket/57580): Avoid errors from null parameters in add_submenu_page(). A deprecated error caused by the `wp_normalize_path()` function when null is passed as an argument. This issue occurs primarily due to plugins incorrectly passing null in the `add_submenu_page()` function. _NOTE: Has a patch, but moved to Future Release._
+  - [#61179](https://core.trac.wordpress.org/ticket/61179): Deprecated messages about passing null in widgets.php. Addresses a deprecated message issue in `widgets.php`. _NOTE: Has a patch, but moved to WordPress 6.7._
 
 - PHP 8.2
-  - [**#55603**: utf8_{encode|decode} deprecation](https://core.trac.wordpress.org/ticket/55603) with pending decision on requiring a PHP extension. _NOTE: Has a patch, but moved to WordPress 6.8._
-  - [**#56034**: Unknown dynamic properties'](https://core.trac.wordpress.org/ticket/56034) deprecation. _NOTE: Moved to Future Release._
-  - [**#57304**: Add SensitiveParameter attribute to DB connection and login variables.](https://core.trac.wordpress.org/ticket/57304) This enhancement aims to protect sensitive data in case of errors, making it less likely to be exposed in logs or bug reports. _NOTE: Moved to WordPress 6.7._
-  - [**#60875**: Handler proposal for known dynamic properties that are initialized and set late only when getting its value.](https://core.trac.wordpress.org/ticket/60875) Handling dynamic properties that are initialized only when accessed. Since PHP 8.2 deprecates dynamic (non-declared) properties, the proposal aims to pre-declare these properties while retaining the current design where they are lazily initialized. _NOTE: Moved to WordPress 6.8._
-  - [**#61154**: Fix the 'attributes' dynamic property in WP_Block.](https://core.trac.wordpress.org/ticket/61154) Fixing the 'attributes' dynamic property in the `WP_Block` class. _NOTE: Has a patch, but moved to WordPress 6.8._
-  - [**#61890**: Handle WP_Term dynamic properties for PHP 8.2](https://core.trac.wordpress.org/ticket/61890). Handling of dynamic properties in the `WP_Term` class to ensure compatibility. _NOTE: Has a patch, but moved to WordPress 6.8._
+  - [#55603](https://core.trac.wordpress.org/ticket/55603): utf8_{encode|decode} deprecation with pending decision on requiring a PHP extension. _NOTE: Has a patch, but moved to WordPress 6.8._
+  - [#56034](https://core.trac.wordpress.org/ticket/56034): Unknown dynamic properties' deprecation. _NOTE: Moved to Future Release._
+  - [#57304](https://core.trac.wordpress.org/ticket/57304): Add SensitiveParameter attribute to DB connection and login variables. This enhancement aims to protect sensitive data in case of errors, making it less likely to be exposed in logs or bug reports. _NOTE: Moved to WordPress 6.7._
+  - [#60875](https://core.trac.wordpress.org/ticket/60875): Handler proposal for known dynamic properties that are initialized and set late only when getting its value. Handling dynamic properties that are initialized only when accessed. Since PHP 8.2 deprecates dynamic (non-declared) properties, the proposal aims to pre-declare these properties while retaining the current design where they are lazily initialized. _NOTE: Moved to WordPress 6.8._
+  - [#61154](https://core.trac.wordpress.org/ticket/61154): Fix the 'attributes' dynamic property in WP_Block. Fixing the 'attributes' dynamic property in the `WP_Block` class. _NOTE: Has a patch, but moved to WordPress 6.8._
+  - [#61890](https://core.trac.wordpress.org/ticket/61890): Handle WP_Term dynamic properties for PHP 8.2. Handling of dynamic properties in the `WP_Term` class to ensure compatibility. _NOTE: Has a patch, but moved to WordPress 6.8._
 
 _What does "beta" mean?_
 
 - PHP 8.3
   - Deprecation notices. A deprecation notice is not an error, but is an indicator that the code being cited in the notice will be changed in future php versions. With a deprecation notice, the PHP code will continue to work and nothing is broken.
-  - [**#59231**: Prepare for PHP 8.3.](https://core.trac.wordpress.org/ticket/59231). _NOTE: Has a patch, but moved to WordPress 6.7._
-  - [**#59232**: Introduce #[Override] attribute to mark overloaded methods](https://core.trac.wordpress.org/ticket/59232) This attribute helps prevent coding errors by making it clear when a method is overloaded. It also assists with refactoring, debugging, and catching potential breaking changes in the parent class. _NOTE: Has a patch, but moved to Future Release._
-  - [**#59233**: Improve error handling for unserialize()](https://core.trac.wordpress.org/ticket/59233). `maybe_unserialize()` function could still be confronted by data with trailing bytes. _NOTE: Moved to Future Release._
-  - [**#59654**: PHP 8.x: various compatibility fixes for WordPress 6.7](https://core.trac.wordpress.org/ticket/59654). This ticket acts as a central hub for smaller patches that fix specific PHP 8.x failures. It continues the work from previous releases, ensuring that WordPress maintains compatibility with newer PHP versions like PHP 8.0, 8.1, 8.2, and upcoming versions like PHP 8.3. _NOTE: Moved to WordPress 6.7._
+  - [#59231](https://core.trac.wordpress.org/ticket/59231): Prepare for PHP 8.3. _NOTE: Has a patch, but moved to WordPress 6.7._
+  - [#59232](https://core.trac.wordpress.org/ticket/59232): Introduce #[Override] attribute to mark overloaded methods. This attribute helps prevent coding errors by making it clear when a method is overloaded. It also assists with refactoring, debugging, and catching potential breaking changes in the parent class. _NOTE: Has a patch, but moved to Future Release._
+  - [#59233](https://core.trac.wordpress.org/ticket/59233): Improve error handling for unserialize(). `maybe_unserialize()` function could still be confronted by data with trailing bytes. _NOTE: Moved to Future Release._
+  - [#59654](https://core.trac.wordpress.org/ticket/59654): PHP 8.x: various compatibility fixes for WordPress 6.7. This ticket acts as a central hub for smaller patches that fix specific PHP 8.x failures. It continues the work from previous releases, ensuring that WordPress maintains compatibility with newer PHP versions like PHP 8.0, 8.1, 8.2, and upcoming versions like PHP 8.3. _NOTE: Moved to WordPress 6.7._
 
 - PHP 8.4
   - Deprecation notices. A deprecation notice is not an error, but is an indicator that the code being cited in the notice will be changed in future php versions. With a deprecation notice, the PHP code will continue to work and nothing is broken.
-  - [**#62061**: Prepare for PHP 8.4.](https://core.trac.wordpress.org/ticket/62061). _NOTE: Has a patch._
+  - [#62061](https://core.trac.wordpress.org/ticket/62061): Prepare for PHP 8.4. _NOTE: Has a patch._
 
 _Other related tickets_
 
 - PHP
-  - [**#51525**: Add new functions apply_filters_single_type() and apply_filters_ref_array_single_type().](https://core.trac.wordpress.org/ticket/51525)
-  - [**#54183**: Tests: decide on how to handle deprecations in PHPUnit](https://core.trac.wordpress.org/ticket/54183)
-  - [**#54537**: Tests: Enable PHP version check once PHP 8.0 compatibility is achieved.](https://core.trac.wordpress.org/ticket/54537)
-  - [**#58874**: Code Modernization: Consider using the null coalescing operator.](https://core.trac.wordpress.org/ticket/58874)
-  - [**#59234**: Introduce a `wp_json_decode()` function, including validation when available](https://core.trac.wordpress.org/ticket/59234)
+  - [#51525](https://core.trac.wordpress.org/ticket/51525): Add new functions apply_filters_single_type() and apply_filters_ref_array_single_type().
+  - [#54183](https://core.trac.wordpress.org/ticket/54183): Tests: decide on how to handle deprecations in PHPUnit.
+  - [#54537](https://core.trac.wordpress.org/ticket/54537): Tests: Enable PHP version check once PHP 8.0 compatibility is achieved.
+  - [#58874](https://core.trac.wordpress.org/ticket/58874): Code Modernization: Consider using the null coalescing operator.
+  - [#59234](https://core.trac.wordpress.org/ticket/59234): Introduce a `wp_json_decode()` function, including validation when available.
 
 #### WordPress 6.6
 
